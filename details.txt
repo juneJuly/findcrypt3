@@ -1,0 +1,13 @@
+https://github.com/nothings/stb/blob/master/stb_vorbis.c
+
+static uint8 ogg_page_header[4] = { 0x4f, 0x67, 0x67, 0x53 };
+
+static float inverse_db_table[256] = ... // this should be a reliable indicator
+
+References
+----------
+
+* Compiling IDA Pro plugins on Linux
+  - https://github.com/wjp/idados/blob/master/BUILD.md
+
+* Unzip 'idasdk68.zip' inside this repository.

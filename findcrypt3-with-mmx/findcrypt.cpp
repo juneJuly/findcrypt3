@@ -203,14 +203,14 @@ static void recognize_constants(ea_t ea1, ea_t ea2)
         char * instruction = NULL;
         if( get_byte(ea + 2) == 0x38 )
         {
-          if( get_byte(ea + 3) == 0xdb ) instruction = "AESIMC";
-          if( get_byte(ea + 3) == 0xdc ) instruction = "AESENC";
-          if( get_byte(ea + 3) == 0xdd ) instruction = "AESENCLAST";
-          if( get_byte(ea + 3) == 0xde ) instruction = "AESDEC";
-          if( get_byte(ea + 3) == 0xdf ) instruction = "AESDECLAST";
+          if( get_byte(ea + 3) == 0xdb ) instruction = (char*)"AESIMC";
+          if( get_byte(ea + 3) == 0xdc ) instruction = (char*)"AESENC";
+          if( get_byte(ea + 3) == 0xdd ) instruction = (char*)"AESENCLAST";
+          if( get_byte(ea + 3) == 0xde ) instruction = (char*)"AESDEC";
+          if( get_byte(ea + 3) == 0xdf ) instruction = (char*)"AESDECLAST";
         }
         else if( get_byte(ea + 2) == 0x3a && get_byte(ea + 3) == 0xdf )
-          instruction = "AESKEYGENASSIST";
+          instruction = (char*)"AESKEYGENASSIST";
 
         if(instruction)
         {
@@ -266,9 +266,9 @@ void idaapi term(void)
 }
 
 //--------------------------------------------------------------------------
-char help[] = "Find crypt v2-with-mmx";
-char comment[] = "Find crypt v2-with-mmx";
-char wanted_name[] = "Find crypt v2-with-mmx";
+char help[] = "Find crypt v3-with-mmx";
+char comment[] = "Find crypt v3-with-mmx";
+char wanted_name[] = "Find crypt v3-with-mmx";
 char wanted_hotkey[] = "";
 
 
